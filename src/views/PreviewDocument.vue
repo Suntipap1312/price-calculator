@@ -37,20 +37,15 @@ const calcSubTotal = computed(() => {
     products.value.forEach((item) => {
         sum += item.subTotal()
     })
-    console.log('sum', sum)
     return sum
 })
 
-const netTotal = computed(() => {
-    const net = calcSubTotal.value + shippingFee
-    return net.value
-})
 
 const netMessage = computed(() => {
     return bahttext((calcSubTotal.value * rate.value) + shippingFee.value)
 })
 
-console.log(netMessage.value)
+
 
 const dateTime = new Date();
 

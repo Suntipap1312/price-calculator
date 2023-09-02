@@ -14,7 +14,7 @@ const formatToFixed = ((price: number) => {
     return price.toFixed(2)
 })
 
-function onDelete(i) {
+function onDelete(i: number) {
     products.value.splice(i, 1);
 }
 

@@ -14,6 +14,8 @@ function getSavedRate() {
     if (data) {
         const savedRate = JSON.parse(data)
         return savedRate
+    } else {
+        return 0
     }
 }
 
@@ -22,17 +24,19 @@ function getSavedShippingFee() {
     if (data) {
         const savedFee = JSON.parse(data)
         return savedFee
+    } else {
+        return 0
     }
 }
 
 export const rate = ref(getSavedRate());
-watch(rate, (newValue, oldValue) => {
+watch(rate, (newValue, _) => {
     localStorage.setItem('rate', JSON.stringify(newValue))
 })
 
 
 export const shippingFee = ref(getSavedShippingFee())
-watch(shippingFee, (newValue, oldValue) => {
+watch(shippingFee, (newValue, _) => {
     localStorage.setItem('fee', JSON.stringify(newValue))
 })
 
@@ -50,7 +54,7 @@ const savedProducts = localStorage.getItem('products')
 const getSavedData = () => {
     if (savedProducts) {
         const data = JSON.parse(savedProducts)
-        data.forEach((product) => {
+        data.forEach((product: any) => {
             product.subTotal = function () {
                 return this.price * this.quantity;
             };
@@ -69,7 +73,7 @@ export const products = ref<ItemDetail[]>([
     ...data
 ]);
 
-watch(products.value, (newValue, oldValue) => {
+watch(products.value, (newValue, _) => {
     localStorage.setItem('products', JSON.stringify(newValue))
 }, { deep: true })
 
