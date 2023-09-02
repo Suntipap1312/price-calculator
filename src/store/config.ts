@@ -15,7 +15,7 @@ function getSavedRate() {
         const savedRate = JSON.parse(data)
         return savedRate
     } else {
-        return 0
+        return 5
     }
 }
 
@@ -25,7 +25,7 @@ function getSavedShippingFee() {
         const savedFee = JSON.parse(data)
         return savedFee
     } else {
-        return 0
+        return 2000
     }
 }
 
