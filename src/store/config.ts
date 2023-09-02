@@ -54,7 +54,6 @@ const getSavedData = () => {
             product.subTotal = function () {
                 return this.price * this.quantity;
             };
-            console.log(product.subTotal())
         });
 
         return data
