@@ -57,7 +57,7 @@ const dateTime = new Date();
         <div class="preview-container" id="preview">
             <header class="header">
                 <RouterLink to="/" style="text-decoration: none;">
-                    <h2>ใบแจ้ง</h2>
+                    <h2>ใบแจ้งราคา</h2>
                 </RouterLink>
             </header>
             <div class="container">
