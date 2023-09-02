@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400&display=swap');
+
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans Thai', Arial, Helvetica, sans-serif;
+  user-select: none;
+  background-color: #00d1b2;
+}
+
+:root {
+  --border-radius: 10px;
+  --emerald-bgcolor: #20c997;
+}
+
+@media (max-width: 576px) {
+
+  .row {
+      margin: 1.5em;
+  }
+
+  .row .col:first-child .card {
+      background-color: yellow;
+      border-radius: 10px 10px 0 0;
+  }
+
+  .row .col:last-child .card {
+      background-color: yellow;
+      border-radius: 0 0 10px 10px;
+  }
+
+  .card-body {
+      padding: 0.5em;
+  }
+
+  .main-content {
+    background-color: #ffff;
+    height: auto;
+    margin: 0;
+    border-radius: var(--border-radius);
+    padding: 0.5em;
+    border-radius: 0;
+  }
+
+  .input-box {
+    margin: 1em !important;
+  }
+
+  table {
+    width: max-content;
+    
+  }
+
+  .input-price,
+  .input-qty {
+    background-color: yellow;
+      width: 4em;
+      margin: 0 0.5em;
+      height: 1.5em
+  }
+
+  .footer-pc {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+
+  .row .col:first-child .card {
+
+      border-radius: 10px 0 0 10px;
+  }
+
+  .row .col:last-child .card {
+
+      border-radius: 0 10px 10px 0;
+  }
+
+
+  .main-content {
+    background-color: #ffff;
+    height: auto;
+    margin: 1.5em;
+    border-radius: var(--border-radius);
+    padding: 1.5em;
+  }
+
+  .input-price,
+  .input-qty {
+      width: 8em;
+      margin: 0 0.5em;
+      height: 1.5em
+  }
+  .footer-mobile {
+    display: none;
+  }
+}
+
+
+
