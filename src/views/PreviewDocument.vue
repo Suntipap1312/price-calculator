@@ -47,7 +47,7 @@ const netTotal = computed(() => {
 })
 
 const netMessage = computed(() => {
-    return bahttext(calcSubTotal.value + shippingFee.value)
+    return bahttext((calcSubTotal.value * rate.value) + shippingFee.value)
 })
 
 console.log(netMessage.value)
